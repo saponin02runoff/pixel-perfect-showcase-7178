@@ -200,7 +200,7 @@ function Index() {
               title: "Contact Us",
               body: "Questions, ideas, or something we should know about. Write to us and a person will read it.",
               to: "/contact" as const,
-              hash: undefined,
+              hash: "",
               label: "Get in touch",
             },
           ].map((card) => (
@@ -209,7 +209,7 @@ function Index() {
               <p className="mt-3 flex-1 leading-relaxed text-foreground/75">{card.body}</p>
               <Link
                 to={card.to}
-                hash={card.hash}
+                {...(card.hash ? { hash: card.hash } : {})}
                 className="mt-6 text-sm font-medium text-primary link-quiet hover:border-current"
               >
                 {card.label} →
