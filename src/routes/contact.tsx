@@ -17,6 +17,8 @@ export const Route = createFileRoute("/contact")({
         content:
           "Reach Northbridge Foundation about volunteering, partnership, media, or general questions about our work in India.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contact,
@@ -41,7 +43,7 @@ function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Write to us."
-        intro="Tell us what you have in mind. Keep it short if you like. A person reads every message."
+        intro="Contact our team about volunteering, mentorship, school partnerships, or institutional collaboration."
       />
 
       <section className="container-page py-20 md:py-24">
@@ -51,8 +53,7 @@ function Contact() {
               <div className="py-10 text-center">
                 <h2 className="text-2xl">Thank you. Your message is on its way.</h2>
                 <p className="mx-auto mt-4 max-w-md text-foreground/75">
-                  We read everything that comes in and reply as soon as we reasonably can. If it is urgent,
-                  the phone number on this page is the faster route.
+                  Your message has been received. Our team reviews every inquiry and will respond promptly.
                 </p>
                 <button className="btn-outline mt-8 hover:bg-secondary" onClick={() => setSent(false)}>
                   Send another message
@@ -116,7 +117,7 @@ function Contact() {
                 href="tel:+16467389271"
                 className="mt-2 inline-block text-lg text-primary link-quiet hover:border-current"
               >
-                (646) 738-9271
+                +1 (646) 738-9271
               </a>
             </div>
             <div>

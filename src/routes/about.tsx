@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { ConsultingLink } from "@/components/site/ConsultingLink";
-import classroom from "@/assets/classroom-empty.jpg";
+import classroom from "@/assets/engaged-students.webp.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -18,6 +18,8 @@ export const Route = createFileRoute("/about")({
         content:
           "How Northbridge Foundation started, what we are here to do, and the values we work by across India.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: About,
@@ -58,12 +60,12 @@ function About() {
       <section className="container-page py-20 md:py-24">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="text-3xl md:text-4xl">How we started</h2>
+            <h2 className="text-3xl md:text-4xl">Built for lasting opportunity</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
-              Northbridge Foundation began in 2026, connected to <ConsultingLink />, a company that wanted to
-              give something back rather than talk about it. The people behind it kept returning to the same
-              subject. Education came up every time, because it is the one thing that changes what a child can
-              choose later.
+              Northbridge Foundation is an initiative of <ConsultingLink />, an established firm that provides
+              placement support for students pursuing opportunities in the United States. The foundation extends
+              that commitment to opportunity by investing in educational access, strong learning foundations,
+              mentorship, and wider horizons for students across India.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
               India was the obvious place to work. Millions of children are already in classrooms, which is a
@@ -72,13 +74,14 @@ function About() {
               That gap is where we put our attention.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
-              We are new, and we are careful about what we claim. We would rather do a few things properly
-              and describe them honestly than announce more than we can stand behind.
+              Our work is grounded in school partnerships and focused delivery. We align support with local
+              priorities, set clear goals, and build programs designed to strengthen both immediate learning and
+              the choices available to students over time.
             </p>
           </div>
           <img
-            src={classroom}
-            alt="An empty classroom with wooden benches and a blackboard, lit by daylight from a window"
+            src={classroom.url}
+            alt="Students engaged in a classroom activity in India"
             loading="lazy"
             width={1408}
             height={1008}
@@ -124,7 +127,7 @@ function About() {
       <section className="border-t border-border bg-secondary">
         <div className="container-page py-16 md:py-20">
           <p className="mx-auto max-w-2xl text-center font-serif text-2xl leading-snug text-primary-deep md:text-3xl">
-            Northbridge Foundation is run by a small team working full time to get this off the ground.
+            Opportunity expands when strong learning, trusted guidance, and visible pathways come together.
           </p>
         </div>
       </section>

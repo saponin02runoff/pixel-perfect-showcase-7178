@@ -4,7 +4,7 @@ export function ConsultingLink({ className = "" }: { className?: string }) {
       href="https://northbridgeconsulting.org/"
       target="_blank"
       rel="noreferrer noopener"
-      className={`link-quiet hover:border-current ${className}`}
+      className={`font-medium text-primary underline decoration-primary/45 underline-offset-4 transition-colors hover:text-primary-deep hover:decoration-current ${className}`}
     >
       Northbridge Consulting
     </a>

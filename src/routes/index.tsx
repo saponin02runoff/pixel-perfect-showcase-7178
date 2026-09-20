@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { ConsultingLink } from "@/components/site/ConsultingLink";
-import heroImage from "@/assets/hero-classroom.jpg";
-import chalkboard from "@/assets/chalkboard.jpg";
-import books from "@/assets/books.jpg";
+import heroImage from "@/assets/classroom-learning.webp.asset.json";
+import communityClassroom from "@/assets/community-classroom.webp.asset.json";
+import engagedStudents from "@/assets/engaged-students.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,6 +20,8 @@ export const Route = createFileRoute("/")({
         content:
           "Northbridge Foundation helps children across India get a fair chance to learn, understand, and move forward.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -38,7 +40,7 @@ const approach = [
   },
   {
     title: "Show Children More of the World",
-    body: "A child learns better when school connects to something they can picture wanting. We help widen that view.",
+    body: "Alumni and professionals help students see concrete pathways—and recognize that people from backgrounds like theirs can succeed.",
     icon: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c3 3 3 15 0 18M3 12h18",
   },
   {
@@ -55,7 +57,7 @@ function Index() {
         <div className="container-page grid items-center gap-12 py-16 md:py-20 lg:grid-cols-2 lg:gap-16">
           <div className="reveal">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              Founded 2026. Working across India.
+              Education Without Borders. Working across India.
             </p>
             <h1 className="mt-5 text-4xl leading-[1.06] sm:text-5xl xl:text-6xl">
               Real education. More open doors.
@@ -72,19 +74,44 @@ function Index() {
                 Partner With Us
               </Link>
             </div>
-            <p className="mt-8 text-sm text-muted-foreground">
-              An initiative connected to <ConsultingLink />.
-            </p>
           </div>
 
           <div className="reveal">
             <img
-              src={heroImage}
-              alt="An open notebook and pencil on a worn wooden classroom desk in daylight"
-              width={1600}
-              height={1104}
+              src={heroImage.url}
+              alt="Students participating in an interactive classroom lesson in Gujarat, India"
+              width={1800}
+              height={1200}
               className="photo h-[320px] w-full shadow-sm sm:h-[420px] lg:h-[520px]"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-background">
+        <div className="container-page py-10 md:py-12">
+          <div className="grid gap-5 border-l-4 border-accent pl-6 md:grid-cols-[1fr_auto] md:items-center md:gap-12 md:pl-8">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                Supported by established expertise
+              </p>
+              <h2 className="mt-3 text-2xl md:text-3xl">
+                An initiative of <ConsultingLink />
+              </h2>
+              <p className="mt-3 max-w-3xl leading-relaxed text-foreground/80">
+                Northbridge Consulting provides placement support for students pursuing opportunities in the
+                United States. It helps university students build stronger applications, prepare for interviews,
+                and approach internships and full-time opportunities with clarity.
+              </p>
+            </div>
+            <a
+              href="https://northbridgeconsulting.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn-outline w-fit hover:bg-secondary"
+            >
+              Learn more about Northbridge Consulting →
+            </a>
           </div>
         </div>
       </section>
@@ -92,8 +119,8 @@ function Index() {
       <section className="container-page py-20 md:py-24">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <img
-            src={books}
-            alt="Worn schoolbooks and an exercise notebook resting on a concrete windowsill"
+            src={communityClassroom.url}
+            alt="Students learning together with their teachers in an Indian community classroom"
             loading="lazy"
             width={1408}
             height={1008}
@@ -158,18 +185,17 @@ function Index() {
               We hold ourselves to a real standard.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-primary-foreground/85">
-              It is easy for an organization to talk about children and hard to say plainly whether anything
-              improved for them. We would rather be honest. When something works, we say why we think so. When
-              it does not, we say that too and change course.
+              Strong programs begin with clear goals. We track whether students gain access, strengthen core
+              skills, stay engaged, and develop a broader sense of what is possible for their futures.
             </p>
             <p className="mt-4 leading-relaxed text-primary-foreground/80">
-              We would rather report a small, true result than a large, comfortable one. That habit shapes how
-              we spend money, how we choose what to take on, and what we tell the people who trust us.
+              Evidence guides how we allocate resources, refine delivery, and report progress to schools,
+              families, partners, and the people who place their trust in this work.
             </p>
           </div>
           <img
-            src={chalkboard}
-            alt="Close view of a green chalkboard surface with faint chalk marks"
+            src={engagedStudents.url}
+            alt="Two students engaged in a classroom activity in India"
             loading="lazy"
             width={1408}
             height={1008}
@@ -184,7 +210,7 @@ function Index() {
           {[
             {
               title: "Volunteer",
-              body: "Give time or a skill you are good at. Teaching, writing, design, research, or steady hands on ordinary work.",
+              body: "Teach, tutor, mentor, or take responsibility for building programs and delivering strong outcomes.",
               to: "/get-involved" as const,
               hash: "volunteer",
               label: "Volunteer with us",
@@ -222,10 +248,10 @@ function Index() {
       <section className="border-t border-border bg-secondary">
         <div className="container-page py-16 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl md:text-4xl">
-            Right now we are a small team putting everything into getting this right.
+            Better learning grows through committed schools, educators, mentors, and partners.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg text-foreground/80">
-            If you want to be part of what we are building, we would like to hear from you.
+            Bring your experience, reach, or resources to work that expands opportunity for students across India.
           </p>
           <Link to="/contact" className="btn-accent mt-8 hover:btn-accent-hover">
             Get In Touch

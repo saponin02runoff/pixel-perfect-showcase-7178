@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <Logo tone="light" />
             <p className="mt-4 max-w-xs text-sm text-primary-foreground/75">
-              Education Without Borders. Working across India since 2026.
+              Education Without Borders. Working with schools and communities across India.
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
               <li>
                 <a href="tel:+16467389271" className="link-quiet hover:border-current">
-                  (646) 738-9271
+                  +1 (646) 738-9271
                 </a>
               </li>
               <li className="flex gap-2">
@@ -100,8 +100,8 @@ export function Footer() {
 
         <div className="mt-12 space-y-2 border-t border-primary-foreground/15 pt-6 text-sm text-primary-foreground/70">
           <p>
-            Northbridge Foundation is an independent nonprofit initiative connected to{" "}
-            <ConsultingLink />.
+            Northbridge Foundation is an initiative of <ConsultingLink className="text-primary-foreground decoration-primary-foreground/50 hover:text-primary-foreground" />,
+            which provides placement support for students pursuing opportunities in the United States.
           </p>
           <p>© 2026 Northbridge Foundation. All rights reserved.</p>
         </div>
