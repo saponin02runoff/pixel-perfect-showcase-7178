@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
-import books from "@/assets/books.jpg";
+import mentoring from "@/assets/student-mentoring.webp.asset.json";
 
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
@@ -17,6 +17,8 @@ export const Route = createFileRoute("/get-involved")({
         content:
           "Volunteer your time and skills, or partner with Northbridge Foundation as a school, institution, or organization.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: GetInvolved,
@@ -28,7 +30,7 @@ function GetInvolved() {
       <PageHero
         eyebrow="Get Involved"
         title="Two ways in."
-        intro="Both start the same way. You write to us, and a person reads it and writes back."
+        intro="Contribute expertise, leadership, or institutional support to expand opportunity for students."
       />
 
       <section id="volunteer" className="container-page scroll-mt-28 py-20 md:py-24">
@@ -39,22 +41,22 @@ function GetInvolved() {
             </p>
             <h2 className="mt-4 text-3xl md:text-4xl">Volunteer</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
-              This is for people who want to give time or a skill. Teachers and tutors, obviously. Also
-              writers, designers, translators, researchers, and people who are simply good at getting
-              ordinary things done on time.
+              We welcome teachers, tutors, mentors, and experienced leaders who can build programs, guide teams,
+              and take ownership of outcomes. Volunteers should bring relevant experience, dependable follow-through,
+              and a commitment to working respectfully with students, educators, and schools.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
-              Tell us what you are good at and roughly how much time you have. We will be straight with you
-              about whether we have something useful for you right now. If we do not, we will keep in touch
-              rather than invent busywork.
+              Tell us about your teaching, mentoring, or leadership experience, the responsibilities you are
+              prepared to own, and the time you can commit. We match qualified volunteers with clearly defined
+              roles and shared expectations.
             </p>
             <Link to="/contact" className="btn-accent mt-8 hover:btn-accent-hover">
               Volunteer With Us
             </Link>
           </div>
           <img
-            src={books}
-            alt="A stack of well used schoolbooks beside an open exercise notebook"
+            src={mentoring.url}
+            alt="A student receiving focused guidance from a mentor"
             loading="lazy"
             width={1408}
             height={1008}
@@ -71,14 +73,14 @@ function GetInvolved() {
             </p>
             <h2 className="mt-4 text-3xl md:text-4xl">Partner With Us</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
-              This is for schools, institutions, companies, and organizations already working on education in
-              India, or wanting to. Some partners bring reach into places we cannot get to on our own. Some
-              bring teaching experience. Some bring funding or people.
+              We work with schools, institutions, companies, and organizations committed to strengthening
+              education in India. Partners may contribute local reach, teaching expertise, student services,
+              mentors, program capacity, or funding aligned with clear educational priorities.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
-              We are a young organization and we say so upfront. What we can offer is care, attention, and an
-              honest account of what happens. If that fits how you work, write to us and tell us what you have
-              in mind.
+              Each partnership begins with shared goals, defined responsibilities, and a practical delivery
+              plan. We value sustained collaboration, responsible implementation, and clear communication about
+              student progress.
             </p>
             <Link to="/contact" className="btn-primary mt-8 hover:opacity-90">
               Start a Conversation
@@ -88,9 +90,10 @@ function GetInvolved() {
       </section>
 
       <section className="container-page py-16 text-center md:py-20">
-        <h2 className="mx-auto max-w-2xl text-3xl md:text-4xl">Not sure which one fits?</h2>
+        <h2 className="mx-auto max-w-2xl text-3xl md:text-4xl">Have another way to contribute?</h2>
         <p className="mx-auto mt-5 max-w-xl text-foreground/80">
-          Write to us anyway. Describe what you have in mind and we will figure it out together.
+          Share your proposal, relevant experience, and the outcome you want to help advance. Our team will
+          review the opportunity and respond with the most appropriate next step.
         </p>
         <Link to="/contact" className="btn-outline mt-8 hover:bg-secondary">
           Contact Us

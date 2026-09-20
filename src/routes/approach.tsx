@@ -16,6 +16,8 @@ export const Route = createFileRoute("/approach")({
         content:
           "How Northbridge Foundation thinks about access, strong basics, wider horizons, and honest reading of what works.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Approach,
@@ -39,15 +41,15 @@ const pillars = [
   {
     title: "Show Children More of the World",
     paras: [
-      "School makes more sense to a child who can picture what it leads to. Many children have never met someone doing the kind of work they might be good at.",
-      "We care about the ideas, people, and experiences that widen what a child imagines for themselves. It sounds soft. It changes how hard a child is willing to work.",
+      "School becomes more meaningful when students can see where learning may lead. Alumni from similar backgrounds and accomplished professionals can make unfamiliar pathways visible and practical.",
+      "Through talks, panels, and mentorship sessions, students encounter real journeys, ask direct questions, and learn the steps behind different educational and professional opportunities. Seeing someone like themselves succeed can widen ambition and strengthen the confidence to act on it.",
     ],
   },
   {
     title: "Pay Attention to What Works",
     paras: [
       "Good intentions are common in this field. Evidence is rarer. We try to be clear-eyed about whether children are better off, and to say so plainly either way.",
-      "That means keeping what helps, dropping what does not, and being willing to look slow rather than claim results we cannot back up.",
+      "That means keeping what helps, improving what can work better, and using reliable evidence to guide decisions and communicate progress.",
     ],
   },
 ];
@@ -81,16 +83,46 @@ function Approach() {
         <div className="container-page py-20 md:py-24">
           <h2 className="max-w-2xl text-3xl md:text-4xl">How we think about progress</h2>
           <p className="mt-6 max-w-3xl leading-relaxed text-foreground/80">
-            We ask a small set of questions and keep asking them. Can children get to learning that is worth
-            their time. Do they understand the basics, and can they use them outside a test. Do they feel
-            supported by the adults around them. Can they see more possibilities for their own future than
-            they could a year ago.
+            We measure progress against the outcomes that matter: whether students can access consistent
+            learning, strengthen core skills, apply knowledge beyond a test, receive dependable support, and
+            see credible pathways for their own future.
           </p>
           <p className="mt-4 max-w-3xl leading-relaxed text-foreground/80">
-            Some of that is countable and some of it is not. We would rather sit with an honest, partial
-            picture than reach for a number that flatters us. As the work grows, so will what we can say about
-            it.
+            We combine participation and learning data with feedback from students, teachers, and school
+            partners. This balanced view supports program decisions, identifies where additional support is
+            needed, and keeps attention on meaningful student progress.
           </p>
+        </div>
+      </section>
+
+      <section className="container-page py-20 md:py-24">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              Exposure and mentorship
+            </p>
+            <h2 className="mt-4 text-3xl md:text-4xl">Students should be able to see the path ahead.</h2>
+          </div>
+          <div>
+            <p className="text-lg leading-relaxed text-foreground/80">
+              Alumni speakers from similar communities bring credibility that a distant example cannot. Alongside
+              educators and other accomplished professionals, they share the decisions, setbacks, preparation,
+              and support behind their progress.
+            </p>
+            <p className="mt-4 leading-relaxed text-foreground/80">
+              Talks, panels, and mentorship sessions turn possibility into practical next steps. Students leave
+              with a broader view of education and work, clearer questions to ask, and evidence that background
+              does not have to define destination.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/contact" search={{}} className="btn-accent hover:btn-accent-hover">
+                Nominate an Alumni Speaker
+              </Link>
+              <Link to="/get-involved" hash="volunteer" className="btn-outline hover:bg-secondary">
+                Join as a Mentor
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
