@@ -100,8 +100,7 @@ export function Footer() {
 
         <div className="mt-12 space-y-2 border-t border-primary-foreground/15 pt-6 text-sm text-primary-foreground/70">
           <p>
-            Northbridge Foundation is an initiative of <ConsultingLink className="text-primary-foreground decoration-primary-foreground/50 hover:text-primary-foreground" />,
-            which provides placement support for students pursuing opportunities in the United States.
+            Northbridge Foundation is an initiative of <ConsultingLink className="text-primary-foreground decoration-primary-foreground/50 hover:text-primary-foreground" />
           </p>
           <p>© 2026 Northbridge Foundation. All rights reserved.</p>
         </div>
