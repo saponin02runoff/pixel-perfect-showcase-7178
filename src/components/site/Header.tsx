@@ -24,13 +24,21 @@ export function Header() {
                 Learn more →
               </Link>
             </p>
-            <button
-              onClick={() => setBarVisible(false)}
-              aria-label="Dismiss announcement"
-              className="shrink-0 rounded p-1 text-sm opacity-75 transition-opacity hover:opacity-100"
-            >
-              ✕
-            </button>
+            <div className="flex shrink-0 items-center gap-3">
+              <a
+                href="tel:+16467389271"
+                className="text-[0.8rem] font-medium underline decoration-primary-foreground/45 underline-offset-4"
+              >
+                +1 (646) 738-9271
+              </a>
+              <button
+                onClick={() => setBarVisible(false)}
+                aria-label="Dismiss announcement"
+                className="rounded p-1 text-sm opacity-75 transition-opacity hover:opacity-100"
+              >
+                ✕
+              </button>
+            </div>
           </div>
         </div>
       )}
