@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { ConsultingLink } from "@/components/site/ConsultingLink";
-import heroImage from "@/assets/classroom-learning.webp.asset.json";
-import communityClassroom from "@/assets/community-classroom.webp.asset.json";
-import engagedStudents from "@/assets/engaged-students.webp.asset.json";
+import heroImage from "@/assets/classroom-learning.webp";
+import communityClassroom from "@/assets/community-classroom.webp";
+import engagedStudents from "@/assets/engaged-students.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -78,7 +78,7 @@ function Index() {
 
           <div className="reveal">
             <img
-              src={heroImage.url}
+              src={heroImage}
               alt="Students participating in an interactive classroom lesson in Gujarat, India"
               width={1800}
               height={1200}
@@ -119,7 +119,7 @@ function Index() {
       <section className="container-page py-20 md:py-24">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <img
-            src={communityClassroom.url}
+            src={communityClassroom}
             alt="Students learning together with their teachers in an Indian community classroom"
             loading="lazy"
             width={1408}
@@ -194,7 +194,7 @@ function Index() {
             </p>
           </div>
           <img
-            src={engagedStudents.url}
+            src={engagedStudents}
             alt="Two students engaged in a classroom activity in India"
             loading="lazy"
             width={1408}
