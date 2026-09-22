@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { ConsultingLink } from "@/components/site/ConsultingLink";
-import classroom from "@/assets/engaged-students.webp.asset.json";
+import classroom from "@/assets/engaged-students.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -80,7 +80,7 @@ function About() {
             </p>
           </div>
           <img
-            src={classroom.url}
+            src={classroom}
             alt="Students engaged in a classroom activity in India"
             loading="lazy"
             width={1408}

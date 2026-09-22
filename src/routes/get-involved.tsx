@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
-import mentoring from "@/assets/student-mentoring.webp.asset.json";
+import mentoring from "@/assets/student-mentoring.webp";
 
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
@@ -55,7 +55,7 @@ function GetInvolved() {
             </Link>
           </div>
           <img
-            src={mentoring.url}
+            src={mentoring}
             alt="A student receiving focused guidance from a mentor"
             loading="lazy"
             width={1408}
