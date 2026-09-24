@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <Logo tone="light" />
             <p className="mt-4 max-w-xs text-sm text-primary-foreground/75">
-              Building stronger learning foundations so students can shape brighter futures—and help build a stronger nation.
+              Building stronger foundations so students can shape brighter futures and help build a stronger nation.
             </p>
           </div>
 

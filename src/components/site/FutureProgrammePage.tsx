@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "./Layout";
 import { SourceLink, StatusLabel } from "./ProgrammeUI";
 import { sources } from "@/lib/programme-content";
+import olderStudents from "@/assets/older-students-classroom.webp";
 
 type FutureProgramme = {
   eyebrow: string;
@@ -35,9 +36,12 @@ export function FutureProgrammePage({ programme, kind }: { programme: FutureProg
 
       {kind === "future" && (
         <section className="border-y border-border bg-muted/60">
-          <div className="container-page py-16 md:py-20">
-            <h2 className="text-3xl md:text-4xl">What makes this different from a one-off career talk?</h2>
-            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-foreground/80">{programme.intro}</p>
+          <div className="container-page grid gap-10 py-16 md:py-20 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:gap-16">
+            <div>
+              <h2 className="text-3xl md:text-4xl">A structured path from exploration to next steps</h2>
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-foreground/80">{programme.intro}</p>
+            </div>
+            <img src={olderStudents} alt="Older students participating in a classroom session" loading="lazy" width={600} height={593} className="photo h-[320px] w-full sm:h-[380px]" />
           </div>
         </section>
       )}
@@ -86,7 +90,7 @@ export function FutureProgrammePage({ programme, kind }: { programme: FutureProg
 
       <section className="border-y border-border bg-secondary">
         <div className="container-page py-16 md:py-20">
-          <h2 className="text-3xl">Evidence informs the plan; it does not prove future results.</h2>
+          <h2 className="text-3xl">Evidence informs the plan</h2>
           <p className="mt-5 max-w-4xl leading-relaxed text-foreground/80">
             {kind === "mentor" ? (
               <>
