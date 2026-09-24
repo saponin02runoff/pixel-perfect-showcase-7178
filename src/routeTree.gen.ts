@@ -12,8 +12,13 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ApproachRouteImport } from './routes/approach'
+import { Route as BuildLabsRouteImport } from './routes/build-labs'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FutureLabsRouteImport } from './routes/future-labs'
 import { Route as GetInvolvedRouteImport } from './routes/get-involved'
+import { Route as LearningLabsRouteImport } from './routes/learning-labs'
+import { Route as MentorNetworkRouteImport } from './routes/mentor-network'
+import { Route as OurWorkRouteImport } from './routes/our-work'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -30,9 +35,19 @@ const ApproachRoute = ApproachRouteImport.update({
   path: '/approach',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BuildLabsRoute = BuildLabsRouteImport.update({
+  id: '/build-labs',
+  path: '/build-labs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FutureLabsRoute = FutureLabsRouteImport.update({
+  id: '/future-labs',
+  path: '/future-labs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GetInvolvedRoute = GetInvolvedRouteImport.update({
@@ -40,43 +55,109 @@ const GetInvolvedRoute = GetInvolvedRouteImport.update({
   path: '/get-involved',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LearningLabsRoute = LearningLabsRouteImport.update({
+  id: '/learning-labs',
+  path: '/learning-labs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentorNetworkRoute = MentorNetworkRouteImport.update({
+  id: '/mentor-network',
+  path: '/mentor-network',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurWorkRoute = OurWorkRouteImport.update({
+  id: '/our-work',
+  path: '/our-work',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/build-labs': typeof BuildLabsRoute
   '/contact': typeof ContactRoute
+  '/future-labs': typeof FutureLabsRoute
   '/get-involved': typeof GetInvolvedRoute
+  '/learning-labs': typeof LearningLabsRoute
+  '/mentor-network': typeof MentorNetworkRoute
+  '/our-work': typeof OurWorkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/build-labs': typeof BuildLabsRoute
   '/contact': typeof ContactRoute
+  '/future-labs': typeof FutureLabsRoute
   '/get-involved': typeof GetInvolvedRoute
+  '/learning-labs': typeof LearningLabsRoute
+  '/mentor-network': typeof MentorNetworkRoute
+  '/our-work': typeof OurWorkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/build-labs': typeof BuildLabsRoute
   '/contact': typeof ContactRoute
+  '/future-labs': typeof FutureLabsRoute
   '/get-involved': typeof GetInvolvedRoute
+  '/learning-labs': typeof LearningLabsRoute
+  '/mentor-network': typeof MentorNetworkRoute
+  '/our-work': typeof OurWorkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/approach' | '/contact' | '/get-involved'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/approach'
+    | '/build-labs'
+    | '/contact'
+    | '/future-labs'
+    | '/get-involved'
+    | '/learning-labs'
+    | '/mentor-network'
+    | '/our-work'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/approach' | '/contact' | '/get-involved'
-  id: '__root__' | '/' | '/about' | '/approach' | '/contact' | '/get-involved'
+  to:
+    | '/'
+    | '/about'
+    | '/approach'
+    | '/build-labs'
+    | '/contact'
+    | '/future-labs'
+    | '/get-involved'
+    | '/learning-labs'
+    | '/mentor-network'
+    | '/our-work'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/approach'
+    | '/build-labs'
+    | '/contact'
+    | '/future-labs'
+    | '/get-involved'
+    | '/learning-labs'
+    | '/mentor-network'
+    | '/our-work'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ApproachRoute: typeof ApproachRoute
+  BuildLabsRoute: typeof BuildLabsRoute
   ContactRoute: typeof ContactRoute
+  FutureLabsRoute: typeof FutureLabsRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
+  LearningLabsRoute: typeof LearningLabsRoute
+  MentorNetworkRoute: typeof MentorNetworkRoute
+  OurWorkRoute: typeof OurWorkRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -102,11 +183,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApproachRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/build-labs': {
+      id: '/build-labs'
+      path: '/build-labs'
+      fullPath: '/build-labs'
+      preLoaderRoute: typeof BuildLabsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/future-labs': {
+      id: '/future-labs'
+      path: '/future-labs'
+      fullPath: '/future-labs'
+      preLoaderRoute: typeof FutureLabsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/get-involved': {
@@ -116,6 +211,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GetInvolvedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/learning-labs': {
+      id: '/learning-labs'
+      path: '/learning-labs'
+      fullPath: '/learning-labs'
+      preLoaderRoute: typeof LearningLabsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentor-network': {
+      id: '/mentor-network'
+      path: '/mentor-network'
+      fullPath: '/mentor-network'
+      preLoaderRoute: typeof MentorNetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-work': {
+      id: '/our-work'
+      path: '/our-work'
+      fullPath: '/our-work'
+      preLoaderRoute: typeof OurWorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -123,8 +239,13 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ApproachRoute: ApproachRoute,
+  BuildLabsRoute: BuildLabsRoute,
   ContactRoute: ContactRoute,
+  FutureLabsRoute: FutureLabsRoute,
   GetInvolvedRoute: GetInvolvedRoute,
+  LearningLabsRoute: LearningLabsRoute,
+  MentorNetworkRoute: MentorNetworkRoute,
+  OurWorkRoute: OurWorkRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
