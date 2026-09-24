@@ -24,6 +24,7 @@ const strands = [
   ["Fractions and decimals", "Fractions as quantities, number-line positions, division, ratios and daily-life applications"],
   ["Ratios and percentages", "Proportional reasoning, percentages, discounts, data interpretation and financial numeracy"],
   ["Problem-solving", "Reading a question, identifying information, choosing a method and explaining reasoning"],
+  ["English reading and writing", "Direct assessment of comprehension, vocabulary and written expression, with support where a student’s baseline shows a need"],
   ["Scientific thinking", "Observation, prediction, classification, measurement, evidence, variables and explanation"],
   ["Grade-linked science", "Matter, living systems, force, energy, environment and data after prerequisites are secure"],
 ];
