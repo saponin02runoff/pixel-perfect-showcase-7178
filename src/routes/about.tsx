@@ -64,7 +64,7 @@ function About() {
             <h2 className="text-3xl md:text-4xl">Built for lasting opportunity</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
               Northbridge Foundation is an initiative of <ConsultingLink />, a career development consulting firm
-              serving students across more than 40 universities in the United States. The foundation extends that
+              serving students across 40+ universities in the United States. The foundation extends that
               commitment to opportunity through a phased education pathway for students in Delhi.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">

@@ -112,6 +112,15 @@ function Contact() {
 
           <aside className="space-y-8">
             <div>
+              <h2 className="text-xl">Email</h2>
+              <a
+                href="mailto:contact@northbridgefoundation.org"
+                className="mt-2 inline-block break-all text-lg text-primary link-quiet hover:border-current"
+              >
+                contact@northbridgefoundation.org
+              </a>
+            </div>
+            <div>
               <h2 className="text-xl">Phone</h2>
               <a
                 href="tel:+16467389271"
