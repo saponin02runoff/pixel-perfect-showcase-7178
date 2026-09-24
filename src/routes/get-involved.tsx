@@ -9,13 +9,13 @@ export const Route = createFileRoute("/get-involved")({
       {
         name: "description",
         content:
-          "Volunteer your time and skills, or partner with Northbridge Foundation as a school, institution, or organization.",
+          "Partnership and interest pathways for Delhi schools, community organisations, volunteers, mentors, supporters and funders.",
       },
       { property: "og:title", content: "Get Involved | Northbridge Foundation" },
       {
         property: "og:description",
         content:
-          "Volunteer your time and skills, or partner with Northbridge Foundation as a school, institution, or organization.",
+          "Partnership and interest pathways for Delhi schools, community organisations, volunteers, mentors, supporters and funders.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,8 +29,8 @@ function GetInvolved() {
     <Layout>
       <PageHero
         eyebrow="Get Involved"
-        title="Two ways in."
-        intro="Contribute expertise, leadership, or institutional support to expand opportunity for students."
+        title="Build careful, useful support with us."
+        intro="Schools, community organisations, volunteers, supporters and funders can help Northbridge develop an evidence-informed model for students in Delhi."
       />
 
       <section id="volunteer" className="container-page scroll-mt-28 py-20 md:py-24">
@@ -41,17 +41,15 @@ function GetInvolved() {
             </p>
             <h2 className="mt-4 text-3xl md:text-4xl">Volunteer</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
-              We welcome teachers, tutors, mentors, and experienced leaders who can build programs, guide teams,
-              and take ownership of outcomes. Volunteers should bring relevant experience, dependable follow-through,
-              and a commitment to working respectfully with students, educators, and schools.
+               Northbridge will recruit and train teachers, tutors, and experienced leaders when programme systems,
+               safeguarding processes and supervision capacity are ready.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
-              Tell us about your teaching, mentoring, or leadership experience, the responsibilities you are
-              prepared to own, and the time you can commit. We match qualified volunteers with clearly defined
-              roles and shared expectations.
+               Register your interest by sharing your relevant experience and availability. Contact does not confirm
+               placement; student-facing roles will begin only after appropriate onboarding and safeguards are in place.
             </p>
             <Link to="/contact" className="btn-accent mt-8 hover:btn-accent-hover">
-              Volunteer With Us
+               Register Your Interest
             </Link>
           </div>
           <img
@@ -73,19 +71,27 @@ function GetInvolved() {
             </p>
             <h2 className="mt-4 text-3xl md:text-4xl">Partner With Us</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
-              We work with schools, institutions, companies, and organizations committed to strengthening
-              education in India. Partners may contribute local reach, teaching expertise, student services,
-              mentors, program capacity, or funding aligned with clear educational priorities.
+               Northbridge is seeking opportunities to learn alongside schools and community organisations in Delhi.
+               We are interested in partnerships that strengthen, rather than duplicate, existing support for students.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
-              Each partnership begins with shared goals, defined responsibilities, and a practical delivery
-              plan. We value sustained collaboration, responsible implementation, and clear communication about
-              student progress.
+               A partnership conversation can explore student needs, local priorities, practical delivery,
+               responsibilities, safeguarding and how learning progress would be understood.
             </p>
             <Link to="/contact" className="btn-primary mt-8 hover:opacity-90">
               Start a Conversation
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section id="support" className="container-page scroll-mt-28 py-20 md:py-24">
+        <div className="max-w-3xl">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">For supporters and funders</p>
+          <h2 className="mt-4 text-3xl md:text-4xl">Support responsible programme development</h2>
+          <p className="mt-6 leading-relaxed text-foreground/80">Support can help Northbridge build and test a careful, evidence-informed model for students in Delhi. We will prioritise transparent reporting and responsible use of resources as the organisation develops.</p>
+          <p className="mt-4 leading-relaxed text-foreground/80">Northbridge does not currently make tax-deductibility, CSR eligibility or online donation claims on this website.</p>
+          <Link to="/contact" className="btn-primary mt-8 hover:opacity-90">Connect With Northbridge</Link>
         </div>
       </section>
 
