@@ -89,7 +89,7 @@ function Evidence() {
 
       <section className="container-page py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div><h2 className="text-3xl">What we will publish</h2><ul className="mt-6 space-y-3 text-foreground/80">{["Programme model and intended outcomes", "Sources that inform our work", "Key implementation updates", "Results and learning as programmes develop", "Safeguarding commitments", "Governance and financial documentation when available and appropriate"].map((item) => <li key={item} className="flex gap-3"><span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />{item}</li>)}</ul></div>
+          <div><h2 className="text-3xl">What we publish</h2><ul className="mt-6 space-y-3 text-foreground/80">{["Programme model and intended outcomes", "Sources that inform our work", "Key implementation updates", "Results and learning as programmes develop", "Safeguarding commitments", "Governance and financial documentation when available and appropriate"].map((item) => <li key={item} className="flex gap-3"><span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />{item}</li>)}</ul></div>
           <div className="border-l-4 border-primary pl-6"><h2 className="text-3xl">What evidence cannot do</h2><p className="mt-5 leading-relaxed text-foreground/80">External research helps Northbridge make better design decisions. It cannot establish local need without assessment, guarantee implementation quality, or stand in for results from Northbridge programmes.</p></div>
         </div>
       </section>

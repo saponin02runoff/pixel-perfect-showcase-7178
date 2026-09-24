@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { Disclosure, SourceLink, StatusLabel } from "@/components/site/ProgrammeUI";
 import { sources } from "@/lib/programme-content";
+import studentMathematics from "@/assets/student-foundational-mathematics.webp";
 
 export const Route = createFileRoute("/learning-labs")({
   staticData: { sitemap: true },
@@ -55,6 +56,14 @@ function LearningLabs() {
             </p>
           </div>
         </div>
+        <img
+          src={studentMathematics}
+          alt="A school student working through a mathematics problem at a classroom chalkboard"
+          loading="eager"
+          width={1920}
+          height={1280}
+          className="photo mt-12 h-[300px] w-full sm:h-[420px] lg:h-[520px]"
+        />
       </section>
 
       <section className="border-y border-border bg-secondary">

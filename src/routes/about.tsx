@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { ConsultingLink } from "@/components/site/ConsultingLink";
 import { ProgrammePathway } from "@/components/site/ProgrammeUI";
-import classroom from "@/assets/engaged-students.webp";
+import classroom from "@/assets/students-learning-classroom.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -54,7 +54,7 @@ function About() {
     <Layout>
       <PageHero
         eyebrow="About Us"
-        title="Strong learning foundations can widen what comes next."
+        title="Strong foundations create brighter possibilities."
         intro="Northbridge is building an evidence-informed education pathway that helps students strengthen their learning, confidence and capacity to shape their futures."
       />
 
@@ -80,8 +80,8 @@ function About() {
             src={classroom}
             alt="Students engaged in a classroom activity in India"
             loading="lazy"
-            width={1408}
-            height={1008}
+            width={1920}
+            height={1080}
             className="photo h-[320px] w-full lg:h-full"
           />
         </div>

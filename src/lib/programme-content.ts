@@ -31,7 +31,7 @@ export const futureProgrammes = {
     title: "Broader horizons, explored with care.",
     objective: "Expand students’ understanding of what is possible after school.",
     intro:
-      "Future Labs is intended as a structured sequence of exploration, reflection and next-step planning—not as occasional inspirational talks.",
+      "Future Labs is intended as a structured sequence of exploration, reflection and next-step planning.",
     activities: [
       "Career exploration workshops",
       "University and higher-education information sessions",
