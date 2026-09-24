@@ -83,7 +83,7 @@
   h4 {
     font-family: var(--font-serif);
     font-weight: 600;
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
     color: var(--color-primary-deep);
   }
 }
@@ -169,5 +169,27 @@
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 3px;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
   }
 }
