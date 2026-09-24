@@ -24,6 +24,7 @@ const strands = [
   ["Fractions and decimals", "Fractions as quantities, number-line positions, division, ratios and daily-life applications"],
   ["Ratios and percentages", "Proportional reasoning, percentages, discounts, data interpretation and financial numeracy"],
   ["Problem-solving", "Reading a question, identifying information, choosing a method and explaining reasoning"],
+  ["English reading and writing", "Direct assessment of comprehension, vocabulary and written expression, with support where a student’s baseline shows a need"],
   ["Scientific thinking", "Observation, prediction, classification, measurement, evidence, variables and explanation"],
   ["Grade-linked science", "Matter, living systems, force, energy, environment and data after prerequisites are secure"],
 ];
@@ -35,7 +36,7 @@ function LearningLabs() {
         eyebrow="Northbridge Learning Labs"
         badge="Current core programme"
         title="Learning starts at the level each student has reached."
-        intro="Structured small-group support in foundational mathematics and scientific thinking for students in Grades 4–9 in Delhi."
+        intro="Structured small-group support in mathematics, English and scientific thinking for students in Grades 4–9 in Delhi."
       />
 
       <section className="container-page py-16 md:py-20">
@@ -49,9 +50,23 @@ function LearningLabs() {
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
               Students are not grouped only by grade. Support is organised around demonstrated learning needs in
-              number sense, operations, fractions, decimals, ratios, percentages, problem-solving, graph
-              interpretation and scientific reasoning.
+               number sense, operations, fractions, decimals, ratios, percentages, problem-solving, English reading
+               and writing, graph interpretation and scientific reasoning.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-secondary">
+        <div className="container-page grid gap-10 py-16 md:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">Why foundations matter</p>
+            <h2 className="mt-4 text-3xl md:text-4xl">The skills that make later learning possible</h2>
+          </div>
+          <div className="space-y-4 leading-relaxed text-foreground/80">
+            <p>Reading, writing, mathematics and scientific reasoning help students understand later lessons, solve problems and keep learning as their studies become more demanding.</p>
+            <p><SourceLink href={sources.worldBankFoundationalLearning}>World Bank evidence on foundational learning</SourceLink> distinguishes learning from simply spending time in school. Its wider research links stronger skills and additional schooling with future earnings, while cautioning that these broad findings are not a prediction of results from Northbridge.</p>
+            <p>Northbridge aims to help students build academic skill and confidence so they have more ways to pursue meaningful work, earn with dignity and contribute to their communities. These are long-term aspirations. We will measure learning and student experience rather than promise that one programme will produce employment, income or civic outcomes.</p>
           </div>
         </div>
       </section>

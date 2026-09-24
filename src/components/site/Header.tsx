@@ -23,7 +23,7 @@ export function Header() {
         <div className="bg-primary-deep text-primary-foreground">
           <div className="container-page flex items-center justify-between gap-4 py-2">
             <p className="text-[0.8rem] leading-snug">
-              Northbridge Foundation works to make good education easier to reach across India.{" "}
+              Better learning builds stronger futures—and a stronger nation.{" "}
               <Link to="/about" className="underline underline-offset-4">
                 Learn more →
               </Link>

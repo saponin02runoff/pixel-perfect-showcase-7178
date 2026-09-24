@@ -21,6 +21,8 @@ export const Route = createFileRoute("/evidence-accountability")({
 
 const sourceLibrary = [
   ["PARAKH Rashtriya Sarvekshan 2024: UT Report — Delhi", "NCERT / PARAKH", "2024", "Delhi-specific system-level learning context, including Grade 6 fraction and Grade 9 mathematics findings.", sources.parakhDelhi],
+  ["PARAKH Rashtriya Sarvekshan 2024: Delhi Grade 9 report", "NCERT / PARAKH", "2024", "Delhi Grade 9 mathematics and science findings.", sources.parakhDelhiGrade9],
+  ["PARAKH Rashtriya Sarvekshan 2024", "NCERT / PARAKH", "2024", "National context on persistent learning gaps in mathematics and science.", sources.parakhNational],
   ["Teaching at the Right Level to accelerate learning", "J-PAL", "", "Evidence synthesis supporting level-based foundational learning.", sources.tarlSynthesis],
   ["Teaching at the Right Level to improve learning", "J-PAL", "", "Implementation insight, including the importance of support beyond materials or basic training.", sources.tarlCase],
   ["Tailoring instruction to students’ learning levels to increase learning", "J-PAL", "", "Randomized-evaluation evidence relevant to level-based instruction.", sources.tarlEvaluation],
@@ -31,6 +33,9 @@ const sourceLibrary = [
   ["Holistic Education / NEP 2020 implementation material", "Ministry of Education, Government of India", "2020", "Policy alignment for experiential, inquiry-based and practical learning.", sources.holisticEducation],
   ["Protection of Children from Sexual Offences Act, 2012", "India Code", "2012", "Child-protection and reporting obligations relevant to work with children.", sources.pocso],
   ["Vidyanjali", "Ministry of Education, Government of India", "", "Potential route for school volunteer engagement and partnerships.", sources.vidyanjali],
+  ["Foundational Learning", "World Bank", "2025", "Context on why actual learning and foundational skills matter beyond years spent in school.", sources.worldBankFoundationalLearning],
+  ["World Development Report 2018: Learning to Realize Education’s Promise", "World Bank", "2018", "Evidence on learning, productivity, civic participation and the limits of schooling without learning.", sources.worldDevelopmentReport],
+  ["PISA 2022 Results, Volume V", "OECD", "2024", "Research on confidence, willingness to tackle challenges and deeper learning strategies.", sources.oecdConfidence],
 ] as const;
 
 function Evidence() {
@@ -43,6 +48,8 @@ function Evidence() {
         <div className="mt-8 grid gap-4">
           <Disclosure title="Delhi learning context">
             <p>In the <SourceLink href={sources.parakhDelhi}>Delhi PARAKH Rashtriya Sarvekshan 2024 report</SourceLink>, 26% of Grade 6 students correctly answered items on representing and comparing commonly used fractions, while 34% correctly answered items applying fractions, ratios and decimals in daily-life situations. Delhi’s Grade 9 mathematics average was 40% correct, compared with a national average of 37%.</p>
+            <p className="mt-3">The same reporting shows needs beyond mathematics. At Grade 6, students answered 59% of items on applying comprehension strategies and 61% on understanding main ideas and drawing conclusions correctly. At Grade 9, the figure for identifying main points and summarising heard or read material was 65%. These are language results from assessments administered in English, Hindi and Urdu—not English-only results.</p>
+            <p className="mt-3">In science, Delhi’s Grade 9 average was 46% correct. Results included 34% for classifying matter, 36% for explaining simple electrical circuits and electricity’s effects, and 35% for distinguishing living from non-living things. At Grade 6, 38% correctly answered items on asking questions and making predictions about patterns in their environment.</p>
             <p className="mt-3"><strong>Limitation:</strong> these are broad system-level findings. They do not identify the needs of every child or school. Northbridge will conduct local baseline assessments before designing groups and instruction.</p>
           </Disclosure>
           <Disclosure title="Foundational learning approach">
@@ -53,6 +60,10 @@ function Evidence() {
           </Disclosure>
           <Disclosure title="Experiential learning and exposure">
             <p><SourceLink href={sources.holisticEducation}>NEP holistic education material</SourceLink> and <SourceLink href={sources.baglessDays}>Bagless Days guidance</SourceLink> support experiential learning and exposure. Policy alignment does not by itself prove long-term education or labour-market outcomes.</p>
+          </Disclosure>
+          <Disclosure title="Why stronger foundations matter over time">
+            <p><SourceLink href={sources.worldBankFoundationalLearning}>World Bank material on foundational learning</SourceLink> distinguishes actual learning from years spent in school. The <SourceLink href={sources.worldDevelopmentReport}>World Development Report 2018</SourceLink> connects education and learning with productivity, civic participation and the capacity to evaluate public decisions, while making clear that these benefits are not automatic.</p>
+            <p className="mt-3"><SourceLink href={sources.oecdConfidence}>OECD research</SourceLink> connects students’ confidence in their abilities with willingness to tackle challenges and use deeper learning strategies. Northbridge can aim to strengthen confidence alongside academic skills, but must measure both rather than promise that tutoring alone will produce employment, income or civic impact.</p>
           </Disclosure>
         </div>
       </section>

@@ -1,6 +1,9 @@
 export const sources = {
   parakhDelhi:
     "https://parakh.ncert.gov.in/sites/default/files/2025-07/REPORT_NCT%20of%20Delhi_IND007_0.pdf",
+  parakhDelhiGrade9:
+    "https://parakh.ncert.gov.in/sites/default/files/2025-07/REPORT_NCT%20of%20Delhi_IND007.pdf",
+  parakhNational: "https://parakh.ncert.gov.in/blog/parakh-rashtriya-sarvekshan-2024",
   tarlSynthesis: "https://www.povertyactionlab.org/evidence-effect/teaching-at-the-right-level",
   tarlCase: "https://www.povertyactionlab.org/case-study/teaching-right-level-improve-learning",
   tarlEvaluation: "https://www.povertyactionlab.org/fr/print/pdf/node/4537?lang=id",
@@ -14,6 +17,11 @@ export const sources = {
   holisticEducation: "https://www.education.gov.in/nep/holistic-education",
   pocso: "https://www.indiacode.nic.in/bitstream/123456789/9318/1/sexualoffencea2012-32.pdf",
   vidyanjali: "https://vidyanjali.education.gov.in/",
+  worldBankFoundationalLearning: "https://www.worldbank.org/en/brief/2025/05/16/foundational-learning",
+  worldDevelopmentReport:
+    "https://openknowledge.worldbank.org/bitstreams/cc741546-c4dd-5cae-8ba4-6025d145e5de/download",
+  oecdConfidence:
+    "https://www.oecd.org/en/publications/pisa-2022-results-volume-v_c2e44201-en/full-report/component-2.html",
 } as const;
 
 export const futureProgrammes = {
