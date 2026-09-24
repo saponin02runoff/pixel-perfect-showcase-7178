@@ -86,11 +86,11 @@ function OurWork() {
       <section className="container-page py-16 md:py-20">
         <h2 className="text-3xl md:text-4xl">Future layers in the pathway</h2>
         <div className="mt-9 grid gap-6 md:grid-cols-3">
-          {[
+          {([
             ["Future Labs", "Exposure to education pathways, careers, universities, workplaces, research and role models.", "/future-labs" as const],
             ["Mentor Network", "Structured, safeguarded guidance for students navigating goals, education and opportunities.", "/mentor-network" as const],
             ["Build Labs", "Applied projects that help students turn learning into demonstrated capability.", "/build-labs" as const],
-          ].map(([title, body, to]) => (
+          ] as const).map(([title, body, to]) => (
             <article key={title} className="surface-card flex flex-col p-6">
               <StatusLabel future>Future plan</StatusLabel>
               <h3 className="mt-5 text-xl">Northbridge {title}</h3>

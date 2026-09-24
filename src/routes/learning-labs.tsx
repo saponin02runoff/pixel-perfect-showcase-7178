@@ -60,7 +60,7 @@ function LearningLabs() {
         <div className="container-page py-16 md:py-20">
           <h2 className="text-3xl md:text-4xl">What students learn</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {strands.map(([title, body]) => <Disclosure key={title} title={title}><p>{body}</p></Disclosure>)}
+            {strands.map(([title, body]) => <Disclosure key={title ?? "strand"} title={title ?? "Learning area"}><p>{body}</p></Disclosure>)}
           </div>
         </div>
       </section>

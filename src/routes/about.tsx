@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { ConsultingLink } from "@/components/site/ConsultingLink";
+import { ProgrammePathway } from "@/components/site/ProgrammeUI";
 import classroom from "@/assets/engaged-students.webp";
 
 export const Route = createFileRoute("/about")({
@@ -10,13 +11,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "How Northbridge Foundation started, what we are here to do, and the values we work by across India.",
+          "Northbridge Foundation’s mission, values and phased education programme pathway for students in Delhi.",
       },
       { property: "og:title", content: "About Us | Northbridge Foundation" },
       {
         property: "og:description",
         content:
-          "How Northbridge Foundation started, what we are here to do, and the values we work by across India.",
+          "Northbridge Foundation’s mission, values and phased education programme pathway for students in Delhi.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -53,8 +54,8 @@ function About() {
     <Layout>
       <PageHero
         eyebrow="About Us"
-        title="A foundation built around one plain idea."
-        intro="Education should reach further and do more. That is the whole of it."
+        title="Strong learning foundations can widen what comes next."
+        intro="Northbridge is building an evidence-informed education pathway for students in Delhi, beginning with foundational mathematics and scientific thinking."
       />
 
       <section className="container-page py-20 md:py-24">
@@ -63,20 +64,16 @@ function About() {
             <h2 className="text-3xl md:text-4xl">Built for lasting opportunity</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
               Northbridge Foundation is an initiative of <ConsultingLink />, an established firm that provides
-              placement support for students pursuing opportunities in the United States. The foundation extends
-              that commitment to opportunity by investing in educational access, strong learning foundations,
-              mentorship, and wider horizons for students across India.
+               placement support for students pursuing opportunities in the United States. The foundation extends
+               that commitment to opportunity through a phased education pathway for students in Delhi.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
-              India was the obvious place to work. Millions of children are already in classrooms, which is a
-              real achievement. What happens inside those classrooms is uneven. Some children learn well.
-              Many finish years of school without the basics they were meant to pick up in the first few.
-              That gap is where we put our attention.
+              Northbridge begins with Learning Labs: structured small-group support for students in Grades 4–9
+              whose baseline assessment shows gaps in foundational mathematics or scientific thinking.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
-              Our work is grounded in school partnerships and focused delivery. We align support with local
-              priorities, set clear goals, and build programs designed to strengthen both immediate learning and
-              the choices available to students over time.
+               Future Labs, Mentor Network and Build Labs are planned later layers. They will be introduced only
+               when the organisation has appropriate systems, partnerships, safeguarding capacity and evidence.
             </p>
           </div>
           <img
@@ -95,17 +92,15 @@ function About() {
           <div className="surface-card p-8">
             <h2 className="text-2xl">Mission</h2>
             <p className="mt-4 text-lg leading-relaxed text-foreground/80">
-              Northbridge Foundation works to make education easier to reach and more useful for children
-              across India. We support learning that helps children build strong basics, understand the world
-              around them, and have a fair chance at what comes next.
+               Northbridge Foundation works to help students in Delhi build the foundations to learn, explore and
+               thrive—starting with targeted mathematics and scientific-thinking support.
             </p>
           </div>
           <div className="surface-card p-8">
             <h2 className="text-2xl">Vision</h2>
             <p className="mt-4 text-lg leading-relaxed text-foreground/80">
-              We want an India where every child has a real chance to learn. A place where good education
-              reaches further, teaching makes sense, and children can see more possibilities for their own
-              lives.
+               We want students to have strong foundations, trusted guidance, and meaningful opportunities to
+               explore and demonstrate what they can do.
             </p>
           </div>
         </div>
@@ -125,6 +120,15 @@ function About() {
       </section>
 
       <section className="border-t border-border bg-secondary">
+        <div className="container-page py-16 md:py-20">
+          <h2 className="text-3xl md:text-4xl">A deliberately phased pathway</h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-foreground/80">Foundational learning comes first. Exposure, guidance and applied projects remain future plans until Northbridge is ready to deliver them responsibly.</p>
+          <div className="mt-9"><ProgrammePathway compact /></div>
+          <Link to="/our-work" className="btn-primary mt-9 hover:opacity-90">Explore our work</Link>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-background">
         <div className="container-page py-16 md:py-20">
           <p className="mx-auto max-w-2xl text-center font-serif text-2xl leading-snug text-primary-deep md:text-3xl">
             Opportunity expands when strong learning, trusted guidance, and visible pathways come together.
