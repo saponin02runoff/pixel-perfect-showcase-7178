@@ -14,11 +14,15 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as BuildLabsRouteImport } from './routes/build-labs'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EvidenceAccountabilityRouteImport } from './routes/evidence-accountability'
 import { Route as FutureLabsRouteImport } from './routes/future-labs'
 import { Route as GetInvolvedRouteImport } from './routes/get-involved'
 import { Route as LearningLabsRouteImport } from './routes/learning-labs'
 import { Route as MentorNetworkRouteImport } from './routes/mentor-network'
 import { Route as OurWorkRouteImport } from './routes/our-work'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as SafeguardingRouteImport } from './routes/safeguarding'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -43,6 +47,11 @@ const BuildLabsRoute = BuildLabsRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvidenceAccountabilityRoute = EvidenceAccountabilityRouteImport.update({
+  id: '/evidence-accountability',
+  path: '/evidence-accountability',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FutureLabsRoute = FutureLabsRouteImport.update({
@@ -70,6 +79,21 @@ const OurWorkRoute = OurWorkRouteImport.update({
   path: '/our-work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SafeguardingRoute = SafeguardingRouteImport.update({
+  id: '/safeguarding',
+  path: '/safeguarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -77,11 +101,15 @@ export interface FileRoutesByFullPath {
   '/approach': typeof ApproachRoute
   '/build-labs': typeof BuildLabsRoute
   '/contact': typeof ContactRoute
+  '/evidence-accountability': typeof EvidenceAccountabilityRoute
   '/future-labs': typeof FutureLabsRoute
   '/get-involved': typeof GetInvolvedRoute
   '/learning-labs': typeof LearningLabsRoute
   '/mentor-network': typeof MentorNetworkRoute
   '/our-work': typeof OurWorkRoute
+  '/privacy': typeof PrivacyRoute
+  '/resources': typeof ResourcesRoute
+  '/safeguarding': typeof SafeguardingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -89,11 +117,15 @@ export interface FileRoutesByTo {
   '/approach': typeof ApproachRoute
   '/build-labs': typeof BuildLabsRoute
   '/contact': typeof ContactRoute
+  '/evidence-accountability': typeof EvidenceAccountabilityRoute
   '/future-labs': typeof FutureLabsRoute
   '/get-involved': typeof GetInvolvedRoute
   '/learning-labs': typeof LearningLabsRoute
   '/mentor-network': typeof MentorNetworkRoute
   '/our-work': typeof OurWorkRoute
+  '/privacy': typeof PrivacyRoute
+  '/resources': typeof ResourcesRoute
+  '/safeguarding': typeof SafeguardingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -102,11 +134,15 @@ export interface FileRoutesById {
   '/approach': typeof ApproachRoute
   '/build-labs': typeof BuildLabsRoute
   '/contact': typeof ContactRoute
+  '/evidence-accountability': typeof EvidenceAccountabilityRoute
   '/future-labs': typeof FutureLabsRoute
   '/get-involved': typeof GetInvolvedRoute
   '/learning-labs': typeof LearningLabsRoute
   '/mentor-network': typeof MentorNetworkRoute
   '/our-work': typeof OurWorkRoute
+  '/privacy': typeof PrivacyRoute
+  '/resources': typeof ResourcesRoute
+  '/safeguarding': typeof SafeguardingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -116,11 +152,15 @@ export interface FileRouteTypes {
     | '/approach'
     | '/build-labs'
     | '/contact'
+    | '/evidence-accountability'
     | '/future-labs'
     | '/get-involved'
     | '/learning-labs'
     | '/mentor-network'
     | '/our-work'
+    | '/privacy'
+    | '/resources'
+    | '/safeguarding'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -128,11 +168,15 @@ export interface FileRouteTypes {
     | '/approach'
     | '/build-labs'
     | '/contact'
+    | '/evidence-accountability'
     | '/future-labs'
     | '/get-involved'
     | '/learning-labs'
     | '/mentor-network'
     | '/our-work'
+    | '/privacy'
+    | '/resources'
+    | '/safeguarding'
   id:
     | '__root__'
     | '/'
@@ -140,11 +184,15 @@ export interface FileRouteTypes {
     | '/approach'
     | '/build-labs'
     | '/contact'
+    | '/evidence-accountability'
     | '/future-labs'
     | '/get-involved'
     | '/learning-labs'
     | '/mentor-network'
     | '/our-work'
+    | '/privacy'
+    | '/resources'
+    | '/safeguarding'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -153,11 +201,15 @@ export interface RootRouteChildren {
   ApproachRoute: typeof ApproachRoute
   BuildLabsRoute: typeof BuildLabsRoute
   ContactRoute: typeof ContactRoute
+  EvidenceAccountabilityRoute: typeof EvidenceAccountabilityRoute
   FutureLabsRoute: typeof FutureLabsRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
   LearningLabsRoute: typeof LearningLabsRoute
   MentorNetworkRoute: typeof MentorNetworkRoute
   OurWorkRoute: typeof OurWorkRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ResourcesRoute: typeof ResourcesRoute
+  SafeguardingRoute: typeof SafeguardingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -197,6 +249,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/evidence-accountability': {
+      id: '/evidence-accountability'
+      path: '/evidence-accountability'
+      fullPath: '/evidence-accountability'
+      preLoaderRoute: typeof EvidenceAccountabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/future-labs': {
       id: '/future-labs'
       path: '/future-labs'
@@ -232,6 +291,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurWorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/safeguarding': {
+      id: '/safeguarding'
+      path: '/safeguarding'
+      fullPath: '/safeguarding'
+      preLoaderRoute: typeof SafeguardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -241,11 +321,15 @@ const rootRouteChildren: RootRouteChildren = {
   ApproachRoute: ApproachRoute,
   BuildLabsRoute: BuildLabsRoute,
   ContactRoute: ContactRoute,
+  EvidenceAccountabilityRoute: EvidenceAccountabilityRoute,
   FutureLabsRoute: FutureLabsRoute,
   GetInvolvedRoute: GetInvolvedRoute,
   LearningLabsRoute: LearningLabsRoute,
   MentorNetworkRoute: MentorNetworkRoute,
   OurWorkRoute: OurWorkRoute,
+  PrivacyRoute: PrivacyRoute,
+  ResourcesRoute: ResourcesRoute,
+  SafeguardingRoute: SafeguardingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
