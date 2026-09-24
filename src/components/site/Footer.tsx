@@ -44,8 +44,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/approach" className="link-quiet hover:border-current">
-                  Our Approach
+                <Link to="/our-work" className="link-quiet hover:border-current">
+                  Our Work
+                </Link>
+              </li>
+              <li>
+                <Link to="/evidence-accountability" className="link-quiet hover:border-current">
+                  Evidence &amp; Accountability
                 </Link>
               </li>
             </ul>
@@ -69,6 +74,16 @@ export function Footer() {
               <li>
                 <Link to="/contact" className="link-quiet hover:border-current">
                   Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/safeguarding" className="link-quiet hover:border-current">
+                  Safeguarding
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources" className="link-quiet hover:border-current">
+                  Updates &amp; Resources
                 </Link>
               </li>
             </ul>
@@ -103,6 +118,9 @@ export function Footer() {
             Northbridge Foundation is an initiative of <ConsultingLink className="text-primary-foreground decoration-primary-foreground/50 hover:text-primary-foreground" />
           </p>
           <p>© 2026 Northbridge Foundation. All rights reserved.</p>
+          <p>
+            <Link to="/privacy" className="link-quiet hover:border-current">Privacy</Link>
+          </p>
         </div>
       </div>
     </footer>

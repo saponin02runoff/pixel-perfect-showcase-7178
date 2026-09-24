@@ -4,7 +4,8 @@ import { Logo } from "./Logo";
 
 const nav = [
   { to: "/about", label: "About Us" },
-  { to: "/approach", label: "Our Approach" },
+  { to: "/our-work", label: "Our Work" },
+  { to: "/evidence-accountability", label: "Evidence" },
   { to: "/get-involved", label: "Get Involved" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -15,6 +16,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50">
+      <a href="#main-content" className="sr-only z-[60] bg-background px-4 py-3 text-primary focus:not-sr-only focus:absolute focus:left-4 focus:top-4">
+        Skip to main content
+      </a>
       {barVisible && (
         <div className="bg-primary-deep text-primary-foreground">
           <div className="container-page flex items-center justify-between gap-4 py-2">

@@ -111,6 +111,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
       { rel: "manifest", href: "/site.webmanifest" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "NGO",
+          name: "Northbridge Foundation",
+          url: "https://pixel-perfect-showcase-7178.lovable.app",
+          telephone: "+1-646-738-9271",
+          areaServed: "Delhi, India",
+          parentOrganization: {
+            "@type": "Organization",
+            name: "Northbridge Consulting",
+            url: "https://northbridgeconsulting.org/",
+          },
+        }),
+      },
+    ],
   }),
 
   shellComponent: RootShell,
