@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <Logo tone="light" />
             <p className="mt-4 max-w-xs text-sm text-primary-foreground/75">
-              Education Without Borders. Working with schools and communities across India.
+              Building stronger learning foundations so students can shape brighter futures—and help build a stronger nation.
             </p>
           </div>
 
@@ -95,6 +95,11 @@ export function Footer() {
               <li>
                 <a href="tel:+16467389271" className="link-quiet hover:border-current">
                   +1 (646) 738-9271
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contact@northbridgefoundation.org" className="link-quiet break-all hover:border-current">
+                  contact@northbridgefoundation.org
                 </a>
               </li>
               <li className="flex gap-2">

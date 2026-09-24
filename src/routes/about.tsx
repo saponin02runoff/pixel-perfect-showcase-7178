@@ -55,7 +55,7 @@ function About() {
       <PageHero
         eyebrow="About Us"
         title="Strong learning foundations can widen what comes next."
-        intro="Northbridge is building an evidence-informed education pathway for students in Delhi, beginning with foundational mathematics and scientific thinking."
+        intro="Northbridge is building an evidence-informed education pathway that helps students strengthen their learning, confidence and capacity to shape their futures."
       />
 
       <section className="container-page py-20 md:py-24">
@@ -63,9 +63,9 @@ function About() {
           <div>
             <h2 className="text-3xl md:text-4xl">Built for lasting opportunity</h2>
             <p className="mt-6 leading-relaxed text-foreground/80">
-              Northbridge Foundation is an initiative of <ConsultingLink />, an established firm that provides
-               placement support for students pursuing opportunities in the United States. The foundation extends
-               that commitment to opportunity through a phased education pathway for students in Delhi.
+              Northbridge Foundation is an initiative of <ConsultingLink />, a career development consulting firm
+              serving students across more than 40 universities in the United States. The foundation extends that
+              commitment to opportunity through a phased education pathway for students in Delhi.
             </p>
             <p className="mt-4 leading-relaxed text-foreground/80">
               Northbridge begins with Learning Labs: structured small-group support for students in Grades 4–9
@@ -92,15 +92,15 @@ function About() {
           <div className="surface-card p-8">
             <h2 className="text-2xl">Mission</h2>
             <p className="mt-4 text-lg leading-relaxed text-foreground/80">
-               Northbridge Foundation works to help students in Delhi build the foundations to learn, explore and
-               thrive—starting with targeted mathematics and scientific-thinking support.
+               Northbridge Foundation helps students build the academic foundations, confidence and practical
+               capabilities to keep learning, pursue meaningful work and contribute to their communities.
             </p>
           </div>
           <div className="surface-card p-8">
             <h2 className="text-2xl">Vision</h2>
             <p className="mt-4 text-lg leading-relaxed text-foreground/80">
-               We want students to have strong foundations, trusted guidance, and meaningful opportunities to
-               explore and demonstrate what they can do.
+               We believe better education helps build a better nation. Our vision is a future in which students can
+               earn with dignity, shape their own paths and use their abilities in service of society.
             </p>
           </div>
         </div>
