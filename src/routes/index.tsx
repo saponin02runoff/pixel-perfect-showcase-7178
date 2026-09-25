@@ -46,11 +46,11 @@ function Index() {
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {([
-          ["26%", "Grade 6 mathematics", "Answered correctly on questions over representing and comparing commonly used fractions.", sources.parakhDelhi],
-          ["34%", "Grade 6 mathematics", "of questions on using fractions, ratios and decimals in everyday situations were answered correctly.", sources.parakhDelhi],
-          ["59%", "Grade 6 reading and language", "of questions testing comprehension skills such as inference and prediction were answered correctly.", sources.parakhDelhi],
-          ["46%", "Grade 9 science", "was Delhi’s average share of science assessment questions answered correctly.", sources.parakhDelhiGrade9],
-        ] as const).map(([figure, area, label, href]) => <article key={`${area}-${figure}`} className="surface-card flex flex-col p-6"><p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">{area}</p><p className="mt-3 font-serif text-4xl text-primary-deep">{figure}</p><p className="mt-3 flex-1 text-sm leading-relaxed text-foreground/80">{label}</p><SourceLink href={href}>View source</SourceLink></article>)}
+          ["26%", "Grade 6 mathematics assessments", "Students answered correctly on questions over representing and comparing commonly used fractions.", sources.parakhDelhi],
+          ["34%", "Grade 6 mathematics assessments", "of questions on using fractions, ratios and decimals in everyday situations were answered correctly.", sources.parakhDelhi],
+          ["59%", "Grade 6 reading and language assessments", "of questions testing comprehension skills such as inference and prediction were answered correctly.", sources.parakhDelhi],
+          ["46%", "Grade 9 science assessments", "was Delhi’s average share of science assessment questions answered correctly.", sources.parakhDelhiGrade9],
+        ] as const).map(([figure, area, label, href]) => <article key={`${area}-${figure}`} className="surface-card flex flex-col p-6"><p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">{area}</p><p className="mt-3 flex items-baseline gap-2 font-serif text-primary-deep">{figure !== "46%" && <span className="text-lg italic text-muted-foreground">only</span>}<span className="text-4xl">{figure}</span></p><p className="mt-3 flex-1 text-sm leading-relaxed text-foreground/80">{label}</p><SourceLink href={href}>View source</SourceLink></article>)}
       </div>
       <p className="mt-6 max-w-5xl text-sm leading-relaxed text-muted-foreground">PARAKH language results were drawn from assessments administered in English, Hindi and Urdu; Northbridge will assess students directly before deciding what support they need.</p>
     </section>
