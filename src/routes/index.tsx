@@ -46,7 +46,7 @@ function Index() {
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {([
-          ["26%", "Grade 6 mathematics", "of questions on representing and comparing commonly used fractions were answered correctly.", sources.parakhDelhi],
+          ["26%", "Grade 6 mathematics", "Answered correctly on questions over representing and comparing commonly used fractions.", sources.parakhDelhi],
           ["34%", "Grade 6 mathematics", "of questions on using fractions, ratios and decimals in everyday situations were answered correctly.", sources.parakhDelhi],
           ["59%", "Grade 6 reading and language", "of questions testing comprehension skills such as inference and prediction were answered correctly.", sources.parakhDelhi],
           ["46%", "Grade 9 science", "was Delhi’s average share of science assessment questions answered correctly.", sources.parakhDelhiGrade9],
